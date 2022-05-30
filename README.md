@@ -8,8 +8,11 @@
 4. Lessons learned
 
 ## Overview
-Welcome! This application is a small experiment that uses the [BERT large language model](https://huggingface.co/distilbert-base-uncased) to classify posts from
-the [Am I The Asshole (AITA) subreddit](https://www.reddit.com/r/AmItheAsshole/). The model used to generate predictions is actually a small, fast, "distilled" version of the BERT model meant for finetuning ondownstream tasks. Please note, some of the files needed to be zipped to accomodate Git Large File Storage. The raw data [folder](data/raw) and [trained model](results/) are zip files. You can find the original project structure in my [OneDrive folder](https://1drv.ms/u/s!AkUOTbaWXaF8gbtE71qCMCRxTM3rvQ?e=RhnEYH) (view-only!). I've also posted this summary to my [personal blog](https://alliesaizan.github.io/)
+Welcome! This application is a small experiment that uses the [BERT large language model](https://huggingface.co/distilbert-base-uncased) to classify posts from the [Am I The Asshole (AITA) subreddit](https://www.reddit.com/r/AmItheAsshole/). The model used to generate predictions is actually a small, fast, "distilled" version of the BERT model meant for finetuning ondownstream tasks. Please note, some of the files needed to be zipped to accomodate Git Large File Storage. The raw data [folder](data/raw) and [trained model](results/) are zip files. You can find the original project structure in my [OneDrive folder](https://1drv.ms/u/s!AkUOTbaWXaF8gbtE71qCMCRxTM3rvQ?e=RhnEYH) (view-only!). I've also posted this summary to my [personal blog](https://alliesaizan.github.io/).
+
+My motivation for this project was to familiarize myself with the HuggingFace library. I've worked with LLMs in personal projects before, and wanted to experiment with the state-of-the-art LLM. I chose AITA data because:
+- Okay, I love reading those stories. Sometimes, there's just no better way to spend time on the Internet than marveling at the extent of other peoples' audacity 😅
+- The "Asshole/Not an Asshole" dichotomy was easy to translate into a text classification problem. There are other post categories, like "Everyone Sucks Here", that indicates the assessment is more complex, but I don't include those posts in this analysis.
 
 The repository is structured as follows:
 
