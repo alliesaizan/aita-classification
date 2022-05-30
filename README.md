@@ -2,12 +2,12 @@
 ![](static/icon.png "AITA Icon")
 
 ## Table of Contents
-1. Overview
-2. How to run this experiment on your own machine
-3. Development process
-4. Lessons learned
+1. [Overview](#overview)
+2. [How to run this experiment on your machine](#run)
+3. [Development process](#development)
+4. [Lessons learned](#lessons)
 
-## Overview
+## Overview <a name="overview"></a>
 Welcome! This application is a small experiment that uses the [BERT large language model](https://huggingface.co/distilbert-base-uncased) to classify posts from the [Am I The Asshole (AITA) subreddit](https://www.reddit.com/r/AmItheAsshole/). The model used to generate predictions is actually a small, fast, "distilled" version of the BERT model meant for finetuning ondownstream tasks. Please note, some of the files needed to be zipped to accomodate Git Large File Storage. The raw data [folder](data/raw) and [trained model](results/) are zip files. You can find the original project structure in my [OneDrive folder](https://1drv.ms/u/s!AkUOTbaWXaF8gbtE71qCMCRxTM3rvQ?e=RhnEYH) (view-only!). I've also posted this summary to my [personal blog](https://alliesaizan.github.io/).
 
 My motivation for this project was to familiarize myself with the HuggingFace library. I've worked with LLMs in personal projects before, and wanted to experiment with the state-of-the-art LLM. I chose AITA data because:
@@ -34,12 +34,12 @@ This repository is structured as follows:
 - docer_compose.yaml -- Docker-compose file that specifies volume construction
 - requirements_docker.txt -- Python libraries used to run the project
 
-## How to run this experiment on your own machine
+## How to run this experiment on your own machine <a name="run"></a>
 Clone this repository to your local machine and open up the command prompt (Windows) or terminal (Mac, Linux). You will need to download the distilled BERT model to the working repository, as Docker-compose will include this folder as a volume. You can download the BERT model by running the command `git clone https://huggingface.co/distilbert-base-uncased`; note that it's about 2.4GB in size so download may take a while!
 
 Ensure Docker is installed on your machine. For Windows, docker-compose will come bundled in the installation. Run `docker-compose up -d --build` as a command line operation. The Docker container will build and begin running. You can then navigate to port 5000 on your local machine to view the app!
 
-## Development process
+## Development process <a name="development"></a>
 
 I obtained the data I used to finetune the model from Google Cloud's BigQuery service. As mentioned above, the data consists of posts from the AITA subreddit with the flair "Asshole" or "Not the Asshole". I removed records where the body of the post was blank or deleted (I wonder how Reddit users assess these posts anyways!). The dataset consists of about ~72,000 posts after removing these records. I followed HuggingFace's [text classification tutorial](https://huggingface.co/docs/transformers/tasks/sequence_classification). Subsequent data preparation tasks include splitting the data into training and tests sets (I used a 75% split), tokenizing the text using the  `AutoTokenizer` with BERT as the base model, and transforming the training and test sets into a [Dataset object](https://huggingface.co/docs/datasets/v2.2.1/en/package_reference/main_classes#datasets.Dataset).
 
@@ -56,7 +56,7 @@ Then it was model training time! Using a GPU, the model training process complet
 
 Finally, because just building the final model and app wasn't enough, I also wanted to take this opportunity to learn more about using Docker. I specified the configuration of the container in the Dockerfile and used the `docker-compose` command to set the BERT model up as a volume, build the container, and run it. 
 
-## Lessons learned
+## Lessons learned <a name="lessons"></a>
 I learned quite a lot in the process of developing this application, including:
 - How HuggingFace's API works
 - How to successfully train a model on GPU
