@@ -1,5 +1,5 @@
 # A BERT-based text classifier!
-![](/repository/static/icon.png "AITA Icon")
+![](static/icon.png "AITA Icon")
 
 
 
