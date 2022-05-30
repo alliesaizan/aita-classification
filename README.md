@@ -13,9 +13,9 @@ the [Am I The Asshole (AITA) subreddit](https://www.reddit.com/r/AmItheAsshole/)
 
 The repository is structured as follows:
 
-data
-  raw
-    big-query-aita-aug18-aug19.zip --The results of a SQL query run against a database of reddit posts. The dataset covers all AITA posts from August 2018-2019. Unzip this file to use it. 
-results
-  checkpoint-20238.zip --The final PyTorch text classification model, saved at the last epoch runtime. Unzip this file to use it.
+- data
+  - raw
+    - big-query-aita-aug18-aug19.zip; The results of a SQL query run against a database of reddit posts. The dataset covers all AITA posts from August 2018-2019. Unzip this file to use it. 
+- results
+  - checkpoint-20238.zip --The final PyTorch text classification model, saved at the last epoch runtime. Unzip this file to use it.
  
