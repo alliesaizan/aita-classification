@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href='static/style.css' />
+    <title>AITA Classifier</title>
+    <h1>A BERT-based text classifier</h1>
+
+<body>
+    <p>Welcome! This application is a small experiment that uses the <a
+            href="https://huggingface.co/distilbert-base-uncased">BERT large language model</a> to classify posts from
+        the <a href="https://www.reddit.com/r/AmItheAsshole/">Am I The Asshole (AITA) subreddit</a>. The model used to
+        generate predictions is actually a small, fast, "distilled" version of the BERT model meant for finetuning on
+        downstream tasks. This webpage is bare-bones, but
+        will be accompanied by a post on <a href="https://alliesaizan.github.io/">my blog</a>. No frills, just assholes!
+    <form enctype="multipart/form-data" method="post">
+        <label for="message">Paste your post below: </label><br>
+        <!-- <input type="textarea" id=message" name="message"><br> -->
+        <textarea id="message" name="message"></textarea>
+        <!-- <input type="submit" value="Submit" name="submitbutton"> -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</head>
+
+</html>

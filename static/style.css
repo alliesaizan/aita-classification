@@ -1,0 +1,25 @@
+input[type="text"] {
+    height: 500px;
+    width: 800px;
+    word-wrap: normal;
+    text-align: left;
+    text-anchor: start;
+}
+
+textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+
+    /* Uniform text field size */
+    width: 500px;
+    box-sizing: border-box;
+
+    /* Match form field borders */
+    border: 1px solid #999;
+
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* Provide space to type some text */
+    height: 15em;
+}
