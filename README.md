@@ -21,15 +21,15 @@ The repository is structured as follows:
 - src
   - transformers-model-train.py -- Python file used to train the model. Uses CUDA on GPU
 -  static
-  -  icon.png -- The AITA header icon
-  -  style.css -- webpage formatting
+  - icon.png -- The AITA header icon
+  - style.css -- webpage formatting
 -  templates
   - home.html -- Homepage
   - results.html -- Webpage for prediction results 
--  Dockerfile -- specifies container construction
--  app.py -- a Flask application that enables the user to enter a AITA post and classifies whether the original poster (OP) is an asshole or not
--  docer_compose.yaml -- Docker-compose file that specifies volume construction
--  requirements_docker.txt -- Python libraries used to run the project
+- Dockerfile -- specifies container construction
+- app.py -- a Flask application that enables the user to enter a AITA post and classifies whether the original poster (OP) is an asshole or not
+- docer_compose.yaml -- Docker-compose file that specifies volume construction
+- requirements_docker.txt -- Python libraries used to run the project
 
 ## How to run this experiment on your own machine
 Clone this repository to your local machine and open up the command prompt (Windows) or terminal (Mac, Linux). Ensure docker is installed on your machine. For Windows, docker-compose will come bundled in the installation. Run `docker-compose up -d --build` as a command line operation. The Docker container will build and begin running. You can then navigate to port 5000 on your local machine to view the app!
