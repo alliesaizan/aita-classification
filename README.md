@@ -20,10 +20,10 @@ The repository is structured as follows:
   - checkpoint-20238.zip --The final PyTorch text classification model, saved at the last epoch runtime. Unzip this file to use it.
 - src
   - transformers-model-train.py -- Python file used to train the model. Uses CUDA on GPU
--  static
+- static
   - icon.png -- The AITA header icon
   - style.css -- webpage formatting
--  templates
+- templates
   - home.html -- Homepage
   - results.html -- Webpage for prediction results 
 - Dockerfile -- specifies container construction
