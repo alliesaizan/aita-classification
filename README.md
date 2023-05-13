@@ -50,7 +50,7 @@ I then defined a Data Collator, which creates a bath of examples for the model t
 - Evaluate results at each epoch: true
 - Save results at each epoch: true
 
-Then it was model training time! Using a GPU, the model training process completed in about 2.5 hours. The training process outputted checkpoint models to the /results directory, and I used the model outputted in the last epoch as my final model. When model training was complete, I began to build the accompanying webapp. The home page, shown below, instructs the user to paste in the text body of an AITA post. When the user hits submit, the app will redirect to the "results" page, which will either output an prediction or will instruct the user to try a different post. Longer posts tend to generate more prediction errors; I didn't investigate this in the course of development but would revisit this issue in future iterations.
+Then it was model finetuning time! Using a GPU, the model finetuning process completed in about 2.5 hours. The finetuning process outputted checkpoint models to the /results directory, and I used the model outputted in the last epoch as my final model. When model finetuning was complete, I began to build the accompanying webapp. The home page, shown below, instructs the user to paste in the text body of an AITA post. When the user hits submit, the app will redirect to the "results" page, which will either output an prediction or will instruct the user to try a different post. Longer posts tend to generate more prediction errors; I didn't investigate this in the course of development but would revisit this issue in future iterations.
 
 ![](static/screenshot.png "Screenshot")
 
